@@ -2,7 +2,7 @@ import express from 'express';
 import admin from 'firebase-admin';
 import cors from 'cors';
 
-const {default: serviceAccount} = await import ('./serviceAccountkey.json', {
+const {default: serviceAccount} = await import ('./src/serviceAccountkey.json', {
   assert: {
     type: "json",
   },
@@ -91,3 +91,5 @@ const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+export default app;
