@@ -3,7 +3,7 @@ import admin from 'firebase-admin';
 import cors from 'cors';
 
 const {default: serviceAccount} = await import ('./serviceAccountkey.json', {
-  with: {
+  assert: {
     type: "json",
   },
 })
